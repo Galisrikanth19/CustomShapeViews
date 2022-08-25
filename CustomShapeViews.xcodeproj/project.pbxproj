@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18937C2D28B68EA0009130C2 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18937C2C28B68EA0009130C2 /* LocationVC.swift */; };
 		2D1F10DA28AD1F5700048B7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F10D928AD1F5700048B7C /* AppDelegate.swift */; };
 		2D1F10DC28AD1F5700048B7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F10DB28AD1F5700048B7C /* SceneDelegate.swift */; };
 		2D1F10DE28AD1F5700048B7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F10DD28AD1F5700048B7C /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18937C2C28B68EA0009130C2 /* LocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		2D1F10D628AD1F5700048B7C /* CustomShapeViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomShapeViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1F10D928AD1F5700048B7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D1F10DB28AD1F5700048B7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				2D1F10D928AD1F5700048B7C /* AppDelegate.swift */,
 				2D1F10DB28AD1F5700048B7C /* SceneDelegate.swift */,
 				2D1F10DD28AD1F5700048B7C /* ViewController.swift */,
+				18937C2C28B68EA0009130C2 /* LocationVC.swift */,
 				2D1F10DF28AD1F5700048B7C /* Main.storyboard */,
 				2D1F10E228AD1F5A00048B7C /* Assets.xcassets */,
 				2D1F10E428AD1F5A00048B7C /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D1F10DE28AD1F5700048B7C /* ViewController.swift in Sources */,
+				18937C2D28B68EA0009130C2 /* LocationVC.swift in Sources */,
 				2D1F10DA28AD1F5700048B7C /* AppDelegate.swift in Sources */,
 				2D1F10DC28AD1F5700048B7C /* SceneDelegate.swift in Sources */,
 			);

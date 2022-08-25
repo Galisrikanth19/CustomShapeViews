@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Si-5U-M8y">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -141,9 +142,73 @@
             </objects>
             <point key="canvasLocation" x="-23" y="64"/>
         </scene>
+        <!--LocationVC-->
+        <scene sceneID="BjO-pt-IR0">
+            <objects>
+                <viewController storyboardIdentifier="LocationVC" id="7Si-5U-M8y" customClass="LocationVC" customModule="CustomShapeViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OiY-tQ-exO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKL-ik-X7T">
+                                <rect key="frame" x="22" y="263" width="370" height="370"/>
+                                <color key="backgroundColor" name="layerSelectedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" secondItem="RKL-ik-X7T" secondAttribute="width" multiplier="1:1" id="cfN-PY-I0e"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFe-Hd-XdH">
+                                <rect key="frame" x="32" y="273" width="350" height="350"/>
+                                <color key="backgroundColor" red="0.078431372550000003" green="0.1450980392" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2UU-fM-HLp">
+                                <rect key="frame" x="154.5" y="395.5" width="105" height="105"/>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.1450980392" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbu-5K-vf5">
+                                <rect key="frame" x="337" y="64" width="57" height="31"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.75294117650000003" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Build"/>
+                                <connections>
+                                    <action selector="buildBtnClicked:" destination="7Si-5U-M8y" eventType="touchUpInside" id="mId-lY-6HY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qtz-GZ-jsy"/>
+                        <color key="backgroundColor" red="0.078431372550000003" green="0.1450980392" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qtz-GZ-jsy" firstAttribute="trailing" secondItem="vbu-5K-vf5" secondAttribute="trailing" constant="20" id="3EY-vC-6gs"/>
+                            <constraint firstItem="2UU-fM-HLp" firstAttribute="centerX" secondItem="HFe-Hd-XdH" secondAttribute="centerX" id="51P-Mo-ogx"/>
+                            <constraint firstItem="HFe-Hd-XdH" firstAttribute="leading" secondItem="RKL-ik-X7T" secondAttribute="leading" constant="10" id="B8G-eU-Qzf"/>
+                            <constraint firstItem="2UU-fM-HLp" firstAttribute="width" secondItem="HFe-Hd-XdH" secondAttribute="width" multiplier="0.3" id="FtO-e4-6JP"/>
+                            <constraint firstItem="RKL-ik-X7T" firstAttribute="leading" secondItem="Qtz-GZ-jsy" secondAttribute="leading" constant="22" id="I7G-Pg-b76"/>
+                            <constraint firstItem="2UU-fM-HLp" firstAttribute="centerY" secondItem="HFe-Hd-XdH" secondAttribute="centerY" id="NL6-7r-8eT"/>
+                            <constraint firstItem="2UU-fM-HLp" firstAttribute="height" secondItem="HFe-Hd-XdH" secondAttribute="height" multiplier="0.3" id="Qfb-J3-Ro3"/>
+                            <constraint firstItem="RKL-ik-X7T" firstAttribute="bottom" secondItem="HFe-Hd-XdH" secondAttribute="bottom" constant="10" id="Rcs-kZ-bSi"/>
+                            <constraint firstItem="HFe-Hd-XdH" firstAttribute="top" secondItem="RKL-ik-X7T" secondAttribute="top" constant="10" id="YIW-Ky-6MV"/>
+                            <constraint firstItem="vbu-5K-vf5" firstAttribute="top" secondItem="Qtz-GZ-jsy" secondAttribute="top" constant="20" id="YNS-Ba-9Dc"/>
+                            <constraint firstItem="RKL-ik-X7T" firstAttribute="centerY" secondItem="OiY-tQ-exO" secondAttribute="centerY" id="cuW-BT-r6X"/>
+                            <constraint firstItem="RKL-ik-X7T" firstAttribute="trailing" secondItem="HFe-Hd-XdH" secondAttribute="trailing" constant="10" id="rxh-l2-nhv"/>
+                            <constraint firstItem="Qtz-GZ-jsy" firstAttribute="trailing" secondItem="RKL-ik-X7T" secondAttribute="trailing" constant="22" id="u5S-37-Axu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="centerView" destination="2UU-fM-HLp" id="vu9-1z-qTv"/>
+                        <outlet property="innerView" destination="HFe-Hd-XdH" id="UAS-CZ-as1"/>
+                        <outlet property="outerView" destination="RKL-ik-X7T" id="eVw-Vc-VNA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldE-Zj-J3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="64"/>
+        </scene>
     </scenes>
     <resources>
         <image name="dollar" width="25" height="27"/>
+        <namedColor name="layerSelectedColor">
+            <color red="0.92199999094009399" green="0.75300002098083496" blue="0.76099997758865356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
