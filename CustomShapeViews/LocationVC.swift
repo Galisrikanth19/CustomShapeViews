@@ -13,7 +13,7 @@ class LocationVC: UIViewController {
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var centerView: UIView!
     
-    var numberOfSlices = 4
+    var numberOfSlices = 5
     var startAnglesArr:[CGFloat] = [CGFloat]()
     var endAnglesArr:[CGFloat] = [CGFloat]()
     
@@ -94,6 +94,11 @@ class LocationVC: UIViewController {
                 let indexIs = Int(caShapeLayer.name ?? "0") ?? 0
                 let imgV = getImageView(WithTagId: indexIs)
                 
+                var frame = imgV.frame
+                frame.size.width = 76
+                frame.size.height = 40
+                imgV.frame = frame
+                
                 let midPointAngle = (startAnglesArr[indexIs] + endAnglesArr[indexIs]) / 2.0
                 let radiusIs = innerView.layer.bounds.size.width / 2
                 let midPoint = CGPoint(x: radiusIs + (radiusIs+(radiusIs*0.3)) * cos(midPointAngle), y: radiusIs - (radiusIs+(radiusIs*0.3)) * sin(midPointAngle))
@@ -103,15 +108,16 @@ class LocationVC: UIViewController {
     }
     
     private func getImageView(WithTagId tagId: Int) -> UIImageView {
-        let randomInt = Int.random(in: 0..<4)
+        let randomInt = Int.random(in: 0..<9)
         let imageName = "\(randomInt)"
-        let image = UIImage(named: imageName)
+        let image = UIImage(named: imageName) ?? UIImage(named: "5")
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapImageView(_:)))
         let imageView = UIImageView(image: image!)
         
         imageView.isUserInteractionEnabled = true
         imageView.tag = tagId
+        imageView.contentMode = .scaleAspectFit
         imageView.addGestureRecognizer(tapGestureRecognizer)
         innerView.addSubview(imageView)
         
